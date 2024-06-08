@@ -180,7 +180,11 @@ CREATE TABLE IF NOT EXISTS otus.product
 ) REFERENCES otus.brand
 (
     id
-)
+),
+    created_at
+    TIMESTAMP
+    DEFAULT
+    CURRENT_TIMESTAMP
     );
 
 CREATE TABLE IF NOT EXISTS otus.review
