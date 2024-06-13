@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS otus.review
     5
 ),
     text TEXT,
-    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY
 (
     user_fk
@@ -258,7 +258,7 @@ CREATE TABLE IF NOT EXISTS otus.question
     INT,
     question_text
     TEXT,
-    question_date
+    created_at
     TIMESTAMP
     DEFAULT
     CURRENT_TIMESTAMP,
@@ -283,7 +283,7 @@ CREATE TABLE IF NOT EXISTS otus.answer
     INT,
     answer_text
     TEXT,
-    answer_date
+    created_at
     TIMESTAMP
     DEFAULT
     CURRENT_TIMESTAMP,
@@ -422,7 +422,7 @@ CREATE TABLE IF NOT EXISTS otus.order
     KEY,
     user_fk
     INT,
-    order_date
+    created_at
     TIMESTAMP
     DEFAULT
     CURRENT_TIMESTAMP,
@@ -617,7 +617,7 @@ CREATE TABLE IF NOT EXISTS otus.payment
     KEY,
     order_fk
     INT,
-    payment_date
+    created_at
     TIMESTAMP
     DEFAULT
     CURRENT_TIMESTAMP,
@@ -655,7 +655,7 @@ CREATE TABLE IF NOT EXISTS otus.shipment
     KEY,
     order_fk
     INT,
-    shipment_date
+    created_at
     TIMESTAMP
     DEFAULT
     CURRENT_TIMESTAMP,
@@ -898,7 +898,7 @@ CREATE TABLE IF NOT EXISTS otus.log
 (
     255
 ) NOT NULL,
-    log_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY
 (
     user_fk
